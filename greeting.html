@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: "Crimson Text", serif;
+        }
+
+        .card-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: 1.2s;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card-front {
+            background: #d32f2f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            font-family: "Great Vibes", cursive;
+        }
+
+        .card-back {
+            background: white;
+            color: #d32f2f;
+            transform: rotateY(180deg);
+            padding: 20px;
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heart {
+            font-size: 3rem;
+            color: #ff1744;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            padding: 0 15px;
+            line-height: 1.6;
+        }
+
+        .signature {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <div>💖 Happy Valentine's Day 💖</div>
+            </div>
+            <div class="card-back">
+                <div class="heart">❤️</div>
+                <div class="message">
+                    <p>My Love,</p>
+                    <p>Happy Valentine’s Day to the most beautiful soul in my life. Every day with you feels like a love story I never want to end.</p>
+                    <p>You are my sunshine, my calm, and my greatest adventure. I cherish every moment with you.</p>
+                </div>
+                <div class="signature">Forever,<br>  Yours loving Baby</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
